@@ -1,0 +1,5 @@
+<div class="add_task_block">
+  <input class="input_text" type="text" placeholder="title" [(ngModel)]="newTitle">
+  <input class="input_text" type="text" placeholder="text" [(ngModel)]="newText">
+  <button class="btn_add_task" (click)="addNew(newText, newTitle)">+ Add task</button>
+</div>

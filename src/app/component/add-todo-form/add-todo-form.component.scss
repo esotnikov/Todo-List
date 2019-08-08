@@ -1,0 +1,24 @@
+.add_task_block {
+    display: flex;
+    justify-content: center;
+    .input_text {
+        border: 1px solid rgba(0,0,0,.50);
+        height: 24px;
+        border-radius: 2px;
+        outline: none;
+        font-size: 16px;
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+    .btn_add_task {
+        background: 0;
+        background-color: #db4c3f;
+        color: #fff !important;
+        text-shadow: none;
+        border: 1px solid transparent;
+        padding: 6px 12px 7px 12px;
+        border-radius: 3px;
+        margin-left: 15px;
+    }
+}

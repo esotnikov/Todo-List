@@ -1,0 +1,6 @@
+<div class="todo_card">
+  <label [ngClass]="{complited: todo.status}">
+    <input type="checkbox" [(ngModel)]="todo.status"> {{todo.title}} - {{todo.text}}
+  </label>
+  <button class="btn_del" (click)="delItem(todo.id)">x</button>
+</div>

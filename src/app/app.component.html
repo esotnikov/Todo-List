@@ -4,21 +4,6 @@
   </div>
 </header>
 <div class="content">
-  <div>
-    <ul>
-      <li *ngFor="let todo of todosArray; let i = index">
-        <div class="todo_card">
-          <label [ngClass]="{complited: todo.status}">
-            <input type="checkbox" [(ngModel)]="todo.status"> {{todo.title}} - {{todo.text}}
-          </label>
-          <button class="btn_del" (click)="delItem(todo.text)">x</button>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <div class="add_task_block">
-    <input class="input_text" type="text" placeholder="title" [(ngModel)]="newTitle">
-    <input class="input_text" type="text" placeholder="text" [(ngModel)]="newText">
-    <button class="btn_add_task" (click)="addNew()">+ Add task</button>
-  </div>
+    <app-list-item [todosArray]="todosArray"></app-list-item>
+    <app-add-todo-form (newTodo)="addNew($event)"></app-add-todo-form>
 </div>
